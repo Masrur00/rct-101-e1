@@ -7,7 +7,7 @@ const Task = ({ data }) => {
   
   return (
     <li data-cy="task" className={styles.task}>
-      <input type="checkbox" data-cy="task-checkbox" />
+      <input type="checkbox" data-cy="task-checkbox" onChange={()=> console.log(data.id)} />
       <div data-cy="task-text">{data.text}</div>
       {/* Counter here */}
       <Counter {...data} />

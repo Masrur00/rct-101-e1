@@ -7,6 +7,7 @@ import task from "../data/tasks.json"
 
 const TaskApp = () => {
   const [data,setData] = useState(task);
+  const [total,setTotal] = useState(data.length);
   
   const AddData = (val)=> {
     
@@ -19,12 +20,14 @@ const TaskApp = () => {
         }
       
       setData([...data, newData])
-      
+      setTotal(total+1)     
   }
+
+
   // NOTE: do not delete `data-cy` key value pair
   return (
     <div data-cy="task-app" className={styles.taskApp}>
-      <TaskHeader />
+      <TaskHeader total={total} />
       <AddTask AddData={AddData} />
       <Tasks data={data} /> 
     </div>
