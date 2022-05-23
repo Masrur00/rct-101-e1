@@ -1,7 +1,12 @@
 .tasks {
   /* sample */
+  border: 1px solid yellow;
+  
+  
 }
 
 .empty {
   /* sample */
+  border: 1px solid green;
+  text-align: center;
 }

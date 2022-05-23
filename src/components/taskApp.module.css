@@ -1,3 +1,5 @@
-.taskApp {
-  /* Sample */
+.taskApp {  
+  width: 30%;
+  border: 2px solid red;
+  margin: 150px auto;  
 }
