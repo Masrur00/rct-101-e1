@@ -7,9 +7,19 @@ import task from "../data/tasks.json"
 
 const TaskApp = () => {
   const [data,setData] = useState(task);
-
+  
   const AddData = (val)=> {
-      setData([...data,val])
+    
+      const newData = 
+        {
+          "id": data.length + 1,
+          "text": val,
+          "done": false,
+          "count": 786,
+        }
+      
+      setData([...data, newData])
+      
   }
   // NOTE: do not delete `data-cy` key value pair
   return (
