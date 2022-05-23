@@ -7,7 +7,9 @@ const AddTask = ({ AddData}) => {
   return (
     <div className={styles.todoForm}>
       <input value={value} onChange={(e)=> setValue(e.target.value)} data-cy="add-task-input" type="text" placeholder="Add task..." />
-      <button onClick={()=> AddData(value)} data-cy="add-task-button">+</button>   
+      <button onClick={()=> {
+        setValue(value)
+        AddData(value)}} data-cy="add-task-button">+</button>   
         
       
     </div>
